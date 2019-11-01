@@ -14,11 +14,11 @@ Function Check_Thresholds {
         return ConvertTo-Json @([pscustomobject][ordered]@{'error_message' = 'Invalid paramaters specified'});
     };
     if (!$memory_pct_thresholds -and !$memory_mb_thresholds) {
-        [int[]]$memory_pct_thresholds = (85,90)
-    }
+        [int[]]$memory_pct_thresholds = (85,90);
+    };
     if (!$disk_pct_thresholds -and !$disk_mb_thresholds) {
-        [int[]]$disk_pct_thresholds = (85,90)
-    }
+        [int[]]$disk_pct_thresholds = (85,90);
+    };
  
     $ErrorAction = "SilentlyContinue";
     $count = 0;
